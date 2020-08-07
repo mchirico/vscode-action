@@ -21,8 +21,11 @@ const startAsync = async (callback: {
   const duration: string = core.getInput('wait_duration')
 
 
-  await exec.exec('make', ['-C', '.vscode-action','sleep_test','T=2'])
 
+  exec.exec('./.vscode-action/code-server/bin/code-server', ['--bind-addr','127.0.0.1:8779','--auth','none' ])
+  exec.exec('./.vscode-action/ngrok', ['authtoken',`${ngrokToken}`])
+
+  await exec.exec('./.vscode-action/ngrok', ['http', '8779'])
 
 
   // fs.writeFileSync('.vscode-action/sshDocker/id_rsa', `${idRsa}`)
