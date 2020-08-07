@@ -105,6 +105,5 @@ id_rsa
 SERVER
 USER*
 
-.vscode-action/**
-dist/**
+
 
