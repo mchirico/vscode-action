@@ -1,0 +1,15 @@
+name: sshproxy-action
+description: ssh remote proxy
+author: Mike Chirico, CWXSTAT cwxstat.io
+inputs:
+  id_rsa:
+    description: 'rsa private key'
+    required: true
+  user:
+    description: 'user name on remote computer'
+    required: true
+  server:
+    description: 'server and port. Example 34.21.19.212:22'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
