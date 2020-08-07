@@ -1,15 +1,17 @@
 name: sshproxy-action
 description: ssh remote proxy
-author: Mike Chirico, CWXSTAT cwxstat.io
+author: Mike Chirico, https://mchirico.github.io/
 inputs:
-  id_rsa:
-    description: 'rsa private key'
+  ngrok_token:
+    description: 'ngrok token'
     required: true
-  user:
-    description: 'user name on remote computer'
+  vscode_port:
+    description: 'vscode port'
     required: true
-  server:
-    description: 'server and port. Example 34.21.19.212:22'
+  wait_duration:
+    description: 'wait duration, 10m is a good input'
+    required: true
+
 runs:
   using: 'node12'
   main: 'dist/index.js'
