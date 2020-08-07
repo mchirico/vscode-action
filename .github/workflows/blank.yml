@@ -36,6 +36,6 @@ jobs:
         
     - uses: mchirico/vscode-action@v1
       with:
-        id_rsa: ${{ secrets.SSH_PRIVATE_KEY }}
+        ngrok_token: ${{ secrets.NGROK_TOKEN }}
         user: ${{ secrets.USER }}
         server: ${{ secrets.SERVER }}
