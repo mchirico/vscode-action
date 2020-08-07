@@ -37,5 +37,5 @@ jobs:
     - uses: mchirico/vscode-action@v1
       with:
         ngrok_token: ${{ secrets.NGROK_TOKEN }}
-        user: ${{ secrets.USER }}
-        server: ${{ secrets.SERVER }}
+        vscode_port: ${{ secrets.PORT }}
+        duration: 10m
