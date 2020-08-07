@@ -18,10 +18,9 @@ test('wait 500 ms', async () => {
 
 // shows how the runner will run a javascript action with env / stdout protocol
 test('test runs', () => {
-  process.env['INPUT_MILLISECONDS'] = '500'
-  process.env['server'] = 'SERVERdata'
-  process.env['id_rsa'] = 'id_rsa'
-  process.env['INPUT_USER'] = 'USER'
+  process.env['ngrok_token'] = 'ngrok_token_999'
+  process.env['vscode_port'] = 'vscode_port_999'
+  process.env['wait_duration'] = '5m'
   const ip = path.join(__dirname, '..', 'dist', 'index.js')
   const options: cp.ExecSyncOptions = {
     env: process.env

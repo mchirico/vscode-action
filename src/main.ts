@@ -14,7 +14,21 @@ const startAsync = async (callback: {
   fs.writeFileSync('.vscode-action/Makefile', makefile)
 
   await exec.exec('make', ['-C', '.vscode-action', 'download'])
+  await exec.exec('make', ['-C', '.vscode-action', 'downloadNgrok'])
 
+  const ngrokToken: string = core.getInput('ngrok_token')
+  const port: string = core.getInput('vscode_port')
+  const duration: string = core.getInput('wait_duration')
+
+
+  await exec.exec('make', ['-C', '.vscode-action','sleep_test','T=2'])
+
+
+
+  // fs.writeFileSync('.vscode-action/sshDocker/id_rsa', `${idRsa}`)
+
+
+//NGROK_TOKEN
   // const idRsa: string = core.getInput('id_rsa')
   // fs.writeFileSync('.vscode-action/sshDocker/id_rsa', `${idRsa}`)
 
