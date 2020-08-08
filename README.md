@@ -10,7 +10,7 @@ vscode into Github Actions for troubleshooting.
 Add the `mchirico/vscode-action@v1` to your action. Below is a complete action yaml. 
 
 
-### .github/workflows/ci.yml
+### .github/workflows/blank.yml
 ```
 name: Sample Test Run with vscode
 
@@ -50,25 +50,31 @@ jobs:
 The free ngrok account works fine.  Copy the token.
 
 
-![image](https://user-images.githubusercontent.com/755710/89712989-7ae3e700-d962-11ea-942b-723742964839.png)
+<img src='https://user-images.githubusercontent.com/755710/89712989-7ae3e700-d962-11ea-942b-723742964839.png' width=670 />
+
 
 
 ## Step 3: Add token to Github Secrets
 
 
-![image](https://user-images.githubusercontent.com/755710/89713057-12493a00-d963-11ea-9f96-e8d2459913b8.png)
+<img src='https://user-images.githubusercontent.com/755710/89713057-12493a00-d963-11ea-9f96-e8d2459913b8.png' width=670 />
+
 
 
 
 ## Step 4:
 
-![image](https://user-images.githubusercontent.com/755710/89713149-db275880-d963-11ea-8be5-9ce36f504b80.png)
+<img src='https://user-images.githubusercontent.com/755710/89713149-db275880-d963-11ea-8be5-9ce36f504b80.pn' width=670 />
+
+
 
 
 ## Step 5: Run the Action
 
 
-![image](https://user-images.githubusercontent.com/755710/89713326-05c5e100-d965-11ea-93ee-b93c76e708e5.png)
+<img src='https://user-images.githubusercontent.com/755710/89713326-05c5e100-d965-11ea-93ee-b93c76e708e5.png' width=670 />
+
+
 
 ## Step 6: 
 
