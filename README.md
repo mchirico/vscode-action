@@ -60,5 +60,19 @@ The free ngrok account works fine.  Copy the token.
 
 
 
+## Step 4:
+
+![image](https://user-images.githubusercontent.com/755710/89713149-db275880-d963-11ea-8be5-9ce36f504b80.png)
+
+
+## Step 5: Run the Action
+
+
+![image](https://user-images.githubusercontent.com/755710/89713326-05c5e100-d965-11ea-93ee-b93c76e708e5.png)
+
+## Step 6: 
+
+
+
 
 
