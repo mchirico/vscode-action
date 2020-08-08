@@ -62,21 +62,23 @@ The free ngrok account works fine.  Copy the token.
 
 
 
-## Step 4:
-
-<img src='https://user-images.githubusercontent.com/755710/89713149-db275880-d963-11ea-8be5-9ce36f504b80.pn' width=670 />
 
 
-
-
-## Step 5: Run the Action
+## Step 4: Run the Action
 
 
 <img src='https://user-images.githubusercontent.com/755710/89713326-05c5e100-d965-11ea-93ee-b93c76e708e5.png' width=670 />
 
 
 
-## Step 6: 
+## Step 5: Grab URL of tunnel
+
+<img src='https://user-images.githubusercontent.com/755710/89713171-12960500-d964-11ea-8f5a-b0ba41d44a09.png' width=700 />
+
+
+## Step 6: Launch VSCODE
+
+<img src='https://user-images.githubusercontent.com/755710/89713240-656fbc80-d964-11ea-8827-9ea6081c57cb.png' width=700 />
 
 
 
