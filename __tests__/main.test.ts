@@ -9,8 +9,11 @@ test('parse time',  () => {
 
   console.log(parsetime('5h'))
   expect(parsetime('5s')).toEqual(5000)
+  expect(parsetime('5 s')).toEqual(5000)
+  expect(parsetime('5 seconds')).toEqual(5000)
   expect(parsetime('5h')).toEqual(18000000)
   expect(parsetime('5hr')).toEqual(18000000)
+  expect(parsetime('5 hours')).toEqual(18000000)
 
 
 })
@@ -37,7 +40,7 @@ test('wait 500 ms', async () => {
 // shows how the runner will run a javascript action with env / stdout protocol
 test('test runs', () => {
   process.env['ngrok_token'] = 'ngrok_token_999'
-  process.env['vscode_port'] = 'vscode_port_999'
+  process.env['vscode_port'] = '8773'
   process.env['wait_duration'] = '5m'
   const ip = path.join(__dirname, '..', 'dist', 'index.js')
   const options: cp.ExecSyncOptions = {
