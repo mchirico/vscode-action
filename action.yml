@@ -1,0 +1,17 @@
+name: sshproxy-action
+description: ssh remote proxy
+author: Mike Chirico, https://mchirico.github.io/
+inputs:
+  ngrok_token:
+    description: 'ngrok token'
+    required: true
+  vscode_port:
+    description: 'vscode port'
+    required: true
+  wait_duration:
+    description: 'wait duration, 10m is a good input'
+    required: true
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

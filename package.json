@@ -1,0 +1,76 @@
+{
+  "name": "vscode-action",
+  "version": "0.0.0",
+  "private": true,
+  "description": "vscode server to debug Github actions",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "ncc build src/main.ts",
+    "format": "prettier --write **/*.ts",
+    "format-check": "prettier --check **/*.ts",
+    "lint": "eslint src/**/*.ts",
+    "pack": "ncc build",
+    "mytest": "rm -rf .vscode-action && npm run build && npm test",
+    "test": "jest",
+    "all": "npm run build && npm run format && npm run lint && npm run pack && npm test"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build && git add dist/"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mchirico/vscode-action.git"
+  },
+  "keywords": [
+    "actions",
+    "debug",
+    "vscode-server",
+    "vscode",
+    "node",
+    "setup"
+  ],
+  "author": "Mike Chirico",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.4",
+    "@actions/exec": "^1.0.4",
+    "@actions/github": "^4.0.0",
+    "@actions/io": "^1.0.2",
+    "@actions/tool-cache": "^1.6.0",
+    "@babel/parser": "^7.11.2",
+    "@lifeomic/attempt": "^3.0.0",
+    "@types/babel__parser": "^7.1.1",
+    "flow-bin": "^0.131.0",
+    "semver": "^7.3.2",
+    "tmp": "^0.2.1",
+    "typed-rest-client": "^1.7.3",
+    "uuid": "^8.3.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.9",
+    "@types/js-base64": "^3.0.0",
+    "@types/node": "^14.0.27",
+    "@types/semver": "^7.3.1",
+    "@types/tmp": "^0.2.0",
+    "@types/uuid": "^8.0.1",
+    "@typescript-eslint/eslint-plugin": "^3.8.0",
+    "@typescript-eslint/parser": "^3.8.0",
+    "@zeit/ncc": "^0.22.3",
+    "acorn": "^7.4.0",
+    "acorn-jsx": "^5.2.0",
+    "eslint": "^7.6.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-github": "^4.1.1",
+    "eslint-plugin-jest": "^23.20.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "graphql": "^15.3.0",
+    "husky": "^4.2.5",
+    "jest": "^26.2.2",
+    "jest-circus": "^26.2.2",
+    "prettier": "^2.0.5",
+    "ts-jest": "^26.1.4",
+    "typescript": "^3.9.7"
+  }
+}
