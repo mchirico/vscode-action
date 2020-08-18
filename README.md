@@ -16,7 +16,7 @@ The free ngrok account works fine.  You'll need to token for Github Secrets. Cop
 
 ### Step 2: Add token to Github Secrets
 
-Next, add this toke the Github Secrets.
+Next, add this token the Github Secrets.
 
 <img src='https://user-images.githubusercontent.com/755710/89713057-12493a00-d963-11ea-9f96-e8d2459913b8.png' width=670 />
 
