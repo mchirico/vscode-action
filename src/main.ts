@@ -27,7 +27,8 @@ const startAsync = async (callback: {
     '--auth',
     'none'
   ])
-  exec.exec('./.vscode-action/ngrok', ['authtoken', `${ngrokToken}`])
+
+  await exec.exec('./.vscode-action/ngrok', ['authtoken', `${ngrokToken}`])
 
   wait(parsetime(duration)).then(isDone => {
     exec.exec('sudo', ['shutdown', 'now'])
