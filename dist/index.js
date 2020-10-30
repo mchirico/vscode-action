@@ -1053,7 +1053,7 @@ const startAsync = (callback) => __awaiter(void 0, void 0, void 0, function* () 
         '--auth',
         'none'
     ]);
-    exec.exec('./.vscode-action/ngrok', ['authtoken', `${ngrokToken}`]);
+    yield exec.exec('./.vscode-action/ngrok', ['authtoken', `${ngrokToken}`]);
     wait_1.wait(parsetime_1.parsetime(duration)).then(isDone => {
         exec.exec('sudo', ['shutdown', 'now']);
     });
@@ -1127,7 +1127,7 @@ VERSION := \`curl -s https://api.github.com/repos/cdr/code-server/releases/lates
 .PHONY: download
 download:
 \t@echo $(VERSION)
-\twget https://github.com/cdr/code-server/releases/download/$(VERSION)/code-server-$(VERSION)-linux-x86_64.tar.gz
+\twget https://github.com/cdr/code-server/releases/download/$(VERSION)/code-server-$(VERSION)-linux-amd64.tar.gz
 \ttar -xvzf code-server-$(VERSION)-linux-x86_64.tar.gz
 \trm -f code-server-$(VERSION)-linux-x86_64.tar.gz
 \tmv code-server-$(VERSION)-linux-x86_64 code-server
