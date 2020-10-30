@@ -1122,7 +1122,7 @@ exports.make = void 0;
 function make() {
     const s = `
 
-VERSION := \`v3.6.1\`
+VERSION := v3.6.1
 
 .PHONY: download
 download:
