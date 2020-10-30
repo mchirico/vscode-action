@@ -1122,15 +1122,15 @@ exports.make = void 0;
 function make() {
     const s = `
 
-VERSION := \`curl -s https://api.github.com/repos/cdr/code-server/releases/latest | grep -oP '"tag_name": "\\K(.*)(?=")'\`
+VERSION := \`v3.6.1\`
 
 .PHONY: download
 download:
 \t@echo $(VERSION)
-\twget https://github.com/cdr/code-server/releases/download/$(VERSION)/code-server-$(VERSION)-linux-amd64.tar.gz
-\ttar -xvzf code-server-$(VERSION)-linux-x86_64.tar.gz
-\trm -f code-server-$(VERSION)-linux-x86_64.tar.gz
-\tmv code-server-$(VERSION)-linux-x86_64 code-server
+\twget https://github.com/cdr/code-server/releases/download/$(VERSION)/code-server-3.6.1-linux-amd64.tar.gz
+\ttar -xvzf code-server-$(VERSION)-linux-amd64.tar.gz
+\trm -f code-server-$(VERSION)-linux-amd64.tar.gz
+\tmv code-server-$(VERSION)-linux-amd64 code-server
 \tcd code-server
 
 
