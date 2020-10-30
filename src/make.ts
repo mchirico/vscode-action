@@ -7,9 +7,9 @@ VERSION := v3.6.1
 download:
 \t@echo $(VERSION)
 \twget https://github.com/cdr/code-server/releases/download/$(VERSION)/code-server-3.6.1-linux-amd64.tar.gz
-\ttar -xvzf code-server-$(VERSION)-linux-amd64.tar.gz
-\trm -f code-server-$(VERSION)-linux-amd64.tar.gz
-\tmv code-server-$(VERSION)-linux-amd64 code-server
+\ttar -xvzf code-server-3.6.1-linux-amd64.tar.gz
+\trm -f code-server-3.6.1-linux-amd64.tar.gz
+\tmv code-server-3.6.1-linux-amd64 code-server
 \tcd code-server
 
 
